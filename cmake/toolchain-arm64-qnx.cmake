@@ -2,22 +2,22 @@
 
 # this one is important
 SET(CMAKE_SYSTEM_NAME QNX)
-SET(arch gcc_ntoaarch64le)
+SET(arch gcc_ntox86_64)
 
 #this one not so much
 SET(CMAKE_SYSTEM_VERSION 1)
 
 # specify the cross compiler
-SET(CMAKE_C_COMPILER   /opt/qnx700/host/linux/x86_64/usr/bin/qcc)
+SET(CMAKE_C_COMPILER   /home/test/qnx/qos223/host/linux/x86_64/usr/bin/qcc)
 SET(CMAKE_C_COMPILER_TARGET ${arch})
 
-SET(CMAKE_CXX_COMPILER /opt/qnx700/host/linux/x86_64/usr/bin/q++)
+SET(CMAKE_CXX_COMPILER /home/test/qnx/qos223/host/linux/x86_64/usr/bin/q++)
 SET(CMAKE_CXX_COMPILER_TARGET ${arch})
 
-SET(CMAKE_STRIP /opt/qnx700/host/linux/x86_64/usr/bin/ntoaarch64-strip)
+SET(CMAKE_STRIP /home/test/qnx/qos223/host/linux/x86_64/usr/bin/ntox86_64-strip)
 
-# where is the target environment 
-SET(CMAKE_FIND_ROOT_PATH  /opt/qnx700/target/qnx7/aarch64le)
+# where is the target environment
+SET(CMAKE_FIND_ROOT_PATH  /home/test/qnx/qos223/target/qnx7/x86_64)
 
 if(DEFINED ENV{EXTERNAL_LIB_DIR})
     LIST(APPEND CMAKE_FIND_ROOT_PATH "$ENV{EXTERNAL_LIB_DIR}")

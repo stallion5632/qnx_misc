@@ -22,9 +22,17 @@ add_executable(udp_speed_receiver
 add_executable(udp_speed_sender
     src/udp_speed_sender.cpp
 )
+add_executable(posix_shm_reader
+    src/posix_shm_reader.cpp
+)
+add_executable(posix_shm_writer
+    src/posix_shm_writer.cpp
+)
 
 target_link_libraries(hello_qnx PRIVATE -pthread)
 target_link_libraries(tcp_speed_server PRIVATE -pthread -lsocket)
 target_link_libraries(tcp_speed_client PRIVATE -pthread -lsocket)
 target_link_libraries(udp_speed_receiver PRIVATE -pthread -lsocket)
 target_link_libraries(udp_speed_sender PRIVATE -pthread -lsocket)
+target_link_libraries(posix_shm_reader PRIVATE -pthread)
+target_link_libraries(posix_shm_writer PRIVATE -pthread)

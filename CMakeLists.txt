@@ -28,6 +28,9 @@ add_executable(posix_shm_reader
 add_executable(posix_shm_writer
     src/posix_shm_writer.cpp
 )
+add_executable(name_ipc
+    src/name_ipc.cpp
+)
 
 target_link_libraries(hello_qnx PRIVATE -pthread)
 target_link_libraries(tcp_speed_server PRIVATE -pthread -lsocket)
@@ -36,3 +39,4 @@ target_link_libraries(udp_speed_receiver PRIVATE -pthread -lsocket)
 target_link_libraries(udp_speed_sender PRIVATE -pthread -lsocket)
 target_link_libraries(posix_shm_reader PRIVATE -pthread)
 target_link_libraries(posix_shm_writer PRIVATE -pthread)
+target_link_libraries(name_ipc PRIVATE -pthread)
